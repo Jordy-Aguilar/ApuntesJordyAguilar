@@ -1,22 +1,42 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:viewModels="clr-namespace:ApuntesJordyAguilar.ViewModels"
-             x:Class="ApuntesJordyAguilar.Views.AboutPage">
-    <ContentPage.BindingContext>
-        <viewModels:AboutViewModel />
-    </ContentPage.BindingContext>
-    <VerticalStackLayout Spacing="10" Margin="10">
-        <HorizontalStackLayout Spacing="10">
-            <Image Source="dotnet_bot.png"
-                   SemanticProperties.Description="The dot net bot waving hello!"
-                   HeightRequest="64" />
-            <Label FontSize="22" FontAttributes="Bold" Text="{Binding Title}" VerticalOptions="End" />
-            <Label FontSize="22" Text="{Binding Version}" VerticalOptions="End" />
-        </HorizontalStackLayout>
+             x:Class="ApuntesJordyAguilar.Views.AboutPage"
+             Title="Pagina About">
 
-        <Label Text="{Binding Message}" />
-        <Button Text="Learn more..." Command="{Binding ShowMoreInfoCommand}" />
-    </VerticalStackLayout>
+    <Grid>
+
+        <Image Source="https://www.xtrafondos.com/wallpapers/resized/cristiano-ronaldo-cr7-real-madrid-portada-juego-fifa-2018-2968.jpg?s=large"
+               Aspect="AspectFill"
+               VerticalOptions="FillAndExpand"
+               HorizontalOptions="FillAndExpand"
+               Opacity="0.8" />
+
+        <BoxView Color="Black"
+                 Opacity="0.8"
+                 VerticalOptions="FillAndExpand"
+                 HorizontalOptions="FillAndExpand" />
+
+        <ScrollView>
+            <StackLayout Padding="20,0,20,0" VerticalOptions="Center" HorizontalOptions="FillAndExpand">
+
+                <Label Text="Jordy Aguilar"
+                       FontSize="50"
+                       FontAttributes="Bold"
+                       TextColor="#C237DB"
+                       HorizontalOptions="Center"
+                       FontFamily="Lucida Handwriting"
+                       Margin="0,20,0,0" />
+                <Label Text="Hola, soy Jordy Aguilar, me gusta el futbol, mi club favorito es el Real Madrid, mi jugador favorito es Cristiano Ronaldo, además me gusta ver anime, series, mi anime favorito es One Piece, y unas de mis series favoritas es cobra kai."
+                    />
+                <Image Source="https://pbs.twimg.com/media/Ew_5Cq0U8AYzxIK.jpg"
+                       HorizontalOptions="Center"
+                       HeightRequest="400"
+                       Margin="0,10,0,0" />
+              
+
+            </StackLayout>
+        </ScrollView>
+    </Grid>
 
 </ContentPage>
